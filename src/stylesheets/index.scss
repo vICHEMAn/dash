@@ -1,0 +1,33 @@
+@import './_globals';
+@import './_habits';
+@import './_crypto';
+@import './_animations';
+
+.background {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background: $background-color;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    background: $background-color-two;
+    width: 100%;
+    height: 100%;
+    transform: skew(-40deg);
+    top: 0;
+    left: 50%;
+    position: absolute;
+  }
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 50px;
+
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+  }
+}

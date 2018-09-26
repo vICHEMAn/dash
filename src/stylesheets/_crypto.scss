@@ -1,0 +1,109 @@
+.crypto-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.6rem 1.6rem;
+  .crypto-content {
+    display: flex;
+    flex-direction: row;
+    .crypto-tracking {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      z-index: 1;
+      background: $grey;
+    }
+    .crypto-portfolio-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 0.6rem;
+      margin-left: 0.6rem;
+      z-index: 0;
+      .widget-small {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.crypto-global-row {
+  font-size: 0.75rem;
+  letter-spacing: 0.9px;
+  p {
+    width: 50%;
+    font-weight: 300;
+  }
+  p:nth-child(1) {
+    border-right: 3px solid $grey;
+  }
+  p:nth-child(2) {
+    text-align: right;
+  }
+}
+
+.crypto-asset-title {
+  margin: auto 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.crypto-asset-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  p {
+    margin-left: auto;
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 0.9px;
+  }
+  p:nth-child(2) {
+    font-size: 0.8rem;
+  }
+}
+
+.crypto-portfolio-border {
+  border-bottom: 3px solid $grey;
+  padding: 0.6rem 0;
+}
+.crypto-portfolio-border:nth-child(1) {
+  padding: 0 0 0.6rem;
+}
+
+.crypto-portfolio-total {
+  padding: 1rem;
+  text-align: center;
+  letter-spacing: 0.9px;
+}
+
+.crypto-portfolio-percentages {
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid $grey;
+  padding-top: 0.6rem;
+  .crypto-portfolio-percentages-row {
+    display: flex;
+    flex-direction: row;
+    p {
+      font-size: 0.8rem;
+      letter-spacing: 0.9px;
+      font-weight: 300;
+    }
+    p:nth-child(2) {
+      margin-left: auto;
+    }
+  }
+}
+
+.refresh {
+  &:before {
+    font-size: 0.6rem;
+    margin-right: 6px;
+  }
+}
+
+.add-crypto {
+  &:before {
+    margin-right: 6px;
+  }
+}

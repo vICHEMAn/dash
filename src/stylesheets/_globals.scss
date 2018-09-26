@@ -1,0 +1,312 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,700);
+
+$darkestblue: #1C2233;
+$darkblue: #1F2435;
+$darkestgrey: #30333C;
+$darkgrey: #373B45;
+$grey: #3B3D44;
+$lightgrey: #979797;
+$white: #FFFFFF;
+$black: #000;
+$turquise: #00E5DF;
+$red: #D94747;
+
+$background-color: $darkestblue;
+$background-color-two: $darkblue;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  color: $white;
+}
+
+.toggle-portfolio {
+  max-width: 526px;
+  transition: all 1s ease-in-out;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-body {
+  margin: 15vh 10px auto;
+  padding: 0 0.6rem 1.2rem;
+  height: auto;
+  min-width: 263px;
+  border: 2px solid $grey;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  background: $grey;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  .widget-title {
+    background: $grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.6rem 0.4rem 0;
+    p {
+      margin: auto 0;
+      vertical-align: bottom;
+      letter-spacing: 0.2rem;
+      font-size: 0.9rem;
+    }
+    i {
+      margin: auto 0;
+      &:before {
+        font-size: 1.1rem;
+        line-height: 0;
+        color: $white;
+        vertical-align: middle;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.clickable {
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+}
+
+.spinner {
+  color: $white;
+  font-size: 30px;
+  margin: auto;
+}
+
+.widget-small {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  padding: 0.6rem 0.6rem;
+  margin: 0.6rem 0 0;
+  background: $darkestgrey;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  .widget-small-row {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    &:focus {
+      outline: none;
+    }
+    p {
+      margin-top: auto;
+      margin-bottom: auto
+    }
+    p:nth-child(2) {
+      margin-left: auto;
+    }
+    i {
+      color: $turquise;
+      font-size: 1.3rem;
+      margin: auto 0 auto auto;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .widget-small-extra {
+    margin-top: 0.6rem;
+    padding: 0 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    border-top: 3px solid $grey;
+    &:focus {
+      outline: 0;
+    }
+    p {
+      font-size: 0.8rem;
+      margin-top: 0.6rem;
+      margin-bottom: auto;
+      letter-spacing: 0.9px;
+      font-weight: 300;
+    }
+    p:nth-child(2) {
+      margin-left: auto;
+    }
+  }
+}
+
+.box-form-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0.6rem;
+  margin: 0.6rem 0 0;
+  min-height: 7rem;
+  width: 240px;
+  background: $darkestgrey;
+  border: 2px solid $darkestgrey;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      label {
+        letter-spacing: 0.2rem;
+        font-size: 0.9rem;
+        margin: 0 0.6rem;
+        color: $white;
+      }
+      input {
+        width: 100%;
+        height: 1.5rem;
+        margin: 0.2rem auto 0 auto;
+        padding: 0.1rem 0.3rem;
+        border: none;
+        background: $darkgrey;
+        color: $white;
+        &:focus {
+          outline: none;
+        }
+      }
+      p {
+        font-size: 0.8rem;
+        font-weight: 300;
+        color: $red;
+        margin: 0.2rem auto;
+        padding-left: 0.3rem;
+      }
+    }
+    .search-results-box {
+      background: $darkgrey;
+      margin-bottom: 0.3rem;
+      max-height: 130px;
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      &::-webkit-scrollbar {
+        background: transparent;
+        width: 8px;
+      }
+      &::-webkit-scrollbar:horizontal {
+        display: none;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $lightgrey;
+        border-radius: 5px;
+      }
+      // &::-webkit-scrollbar-button {
+      //   // display: none;
+      // }
+      // &::-webkit-reziser {
+      //   // display: none;
+      // }
+      // &::-webkit-scrollbar-track {
+      //   // display: none;
+      // }
+      &::-webkit-scrollbar-corner {
+        display: none;
+      }
+      i {
+        margin: 0.3rem auto;
+      }
+      input {
+        display: none;
+      }
+      .search-result {
+        width: 100%;
+        height: 1.5rem;
+        min-height: 1.5rem;
+        margin: 0 auto;
+        padding: 0.1rem 0.3rem;
+        cursor: pointer;
+        display: flex;
+        border-bottom: 2px solid $darkestgrey;
+        color: $lightgrey;
+        p {
+          font-size: 12px;
+          color: $lightgrey;
+          margin: auto 0;
+        }
+        p:nth-child(3) {
+          margin-left: auto;
+        }
+        &:active, &:focus {
+          outline: none;
+        }
+        .checked {
+          color: $white;
+        }
+      }
+    }
+  }
+  .form-error {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: $red;
+    margin: 0.2rem auto;
+    padding: 0 auto;
+  }
+  .remove-confirm-p {
+    text-align: center;
+    margin: auto 0;
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+  .box-form-button-row {
+    display: flex;
+    flex-direction: row;
+    margin: 0.4rem auto 0;
+    button {
+      padding: 0.4rem 0.5rem;
+      margin-left: 0.2rem;
+      border: none;
+      background: $grey;
+      color: $white;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      width: 3.5rem;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.container-boxes {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  .opacity-background {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 998;
+    display: flex;
+    position: absolute;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    .opacity-content {
+      margin: 17vh auto auto;
+      z-index: 999;
+    }
+  }
+}

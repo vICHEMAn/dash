@@ -1,0 +1,35 @@
+# The following types define the data model of the example service
+# based on which the GraphQL API is generated
+
+type User @model {
+  id: ID! @isUnique
+  name: String!
+  # cryptos: [Crypto!]! @relation(name: "CryptoList")
+}
+
+type Habit @model {
+  id: ID! @isUnique
+  name: String!
+  completedDays: [String!]
+}
+
+type Crypto @model {
+  id: ID! @isUnique
+  # user: User! @relation(name: "CryptoList")
+  cryptoId: Int! @isUnique
+  amount: Float!
+}
+
+# added by facebook template: (please uncomment)
+# type User @model {
+#   # Required system field:
+#   id: ID! @isUnique # read-only (managed by Graphcool)
+# 
+#   # Optional system fields (remove if not needed):
+#   createdAt: DateTime! # read-only (managed by Graphcool)
+#   updatedAt: DateTime! # read-only (managed by Graphcool)
+# 
+#   facebookUserId: String @isUnique
+#   email: String # optional, because it's obtained from Facebook API
+# }
+# 
